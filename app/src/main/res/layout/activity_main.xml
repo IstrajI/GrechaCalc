@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/default_screen_margin"
+    tools:context="com.example.android.grechacalc.MainActivity">
+
+    <TextView
+        android:fontFamily="@font/bad_script_regular"
+        android:id="@+id/text_view_main_init_cost_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Стоимость"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_view_main_cost_image"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_main_init_cost_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_attach_money_black_24dp"/>
+
+    <EditText
+        android:id="@+id/edit_text_main_init_cost_input"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toRightOf="image_view_main_cost_image"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_main_init_cost_title" />
+
+    <Button
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_main_init_cost_input"
+        android:id="@+id/button_main_calculate"
+        android:text="Конвертировать"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/text_view_main_result_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Результат"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_main_calculate" />
+
+    <TextView
+        android:id="@+id/main_result_cost_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_main_result_input"/>
+
+    <TextView
+        android:id="@+id/main_result_portions_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_result_cost_text"/>
+
+    <TextView
+        android:id="@+id/main_result_days_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_result_portions_text"/>
+</android.support.constraint.ConstraintLayout>
